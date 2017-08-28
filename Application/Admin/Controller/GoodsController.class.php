@@ -18,7 +18,7 @@ class GoodsController extends BaseController{
         $gnModel = D('goods_number');
         if (IS_POST){
 
-            // 修改的时候先删除再添加，所以直接一律先删除一遍，再添加
+            // 修改的时候先删除再添加，所以添加和修改直接一律先删除一遍，再添加
             $gnModel->where(array(
                 'goods_id'=>array('eq',$id),
             ))->delete();
@@ -28,27 +28,38 @@ class GoodsController extends BaseController{
             $goods_attr_id = I('post.attr_value');
             $goods_number = I('post.goods_number');
 //            dump($goods_attr_id);dump($goods_number);die;
+            // 如果这件商品有属性值 则常规添加
+            if($goods_attr_id)
+            {
+                // 计算一下属性id值和库存量的比例
+                $rate = count($goods_attr_id)/count($goods_number);
+                // 遍历短的
+                foreach ($goods_number as $k => $v){
+                    $index = array($rate*$k);
+                    for($i=1;$i<$rate;$i++)
+                    {
+                        $index[$i] = $index[$i-1] + 1;
+                    }
 
-            // 计算一下属性id值和库存量的比例
-            $rate = count($goods_attr_id)/count($goods_number);
-            // 遍历短的
-            foreach ($goods_number as $k => $v){
-                $index = array($rate*$k);
-                for($i=1;$i<$rate;$i++)
-                {
-                    $index[$i] = $index[$i-1] + 1;
-                }
-
-                $value = array_slice($goods_attr_id,$index[0],$rate);
-                $value = implode(',',$value);
+                    $value = array_slice($goods_attr_id,$index[0],$rate);
+                    $value = implode(',',$value);
 //                $index1 = $rate * $k;
 //                $index2 = $index1 + 1;
+                    $gnModel->add(array(
+                        'goods_id'=>$id,
+                        'goods_number'=>$v,
+                        'goods_attr_id'=>$value,
+                    ));
+                }
+            }
+            else // 没有商品属性则直接添加库存
+            {
                 $gnModel->add(array(
-                    'goods_id'=>$id,
-                    'goods_number'=>$v,
-                    'goods_attr_id'=>$value,
+                    'goods_id' => $id,
+                    'goods_number' => $goods_number[0],
                 ));
             }
+
             $this->success('库存设置成功！',U('showlist?id='.I('get.id')));
             exit();
         }

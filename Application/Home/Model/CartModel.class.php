@@ -27,7 +27,7 @@ class CartModel extends Model
         // 升序排列attr_id 此时不能用$this->goods_attr_id吧  因为还是检查阶段
         $gaid = I('post.goods_attr_id');
         sort($gaid,SORT_NUMERIC);
-        // 转为字符串
+        // 转为字符串(防止null下面gn无法取值)
         $gaid =(string) implode(',',$gaid);
         $gnModel = D('Admin/goods_number');
         $gn = $gnModel->field('goods_number')
