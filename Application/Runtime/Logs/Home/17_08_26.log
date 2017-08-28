@@ -1,0 +1,599 @@
+[ 2017-08-26T10:39:04+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.017663s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.001271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001831s ]
+
+[ 2017-08-26T10:48:39+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001873s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.013896s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000602s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2017-08-26T10:51:55+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.022622s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001157s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001240s ]
+
+[ 2017-08-26T10:56:57+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002987s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.025483s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000714s ]
+
+[ 2017-08-26T10:57:12+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002115s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.028588s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000685s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001405s ]
+
+[ 2017-08-26T11:05:53+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T11:10:52+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T13:00:21+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T19:14:13+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T19:46:12+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T19:46:13+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001453s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.027260s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000660s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2017-08-26T19:51:14+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T19:51:15+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001787s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.010411s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000676s ]
+
+[ 2017-08-26T19:55:09+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T19:55:11+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001386s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.023762s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2017-08-26T19:55:32+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T19:55:34+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001788s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.025861s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+
+[ 2017-08-26T19:56:22+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T19:56:23+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002847s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.013530s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000629s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2017-08-26T20:04:00+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T20:04:20+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T20:04:21+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/%3Cimg%20src='/Public/Upload/Goods/2017-08-26/thumb_3_59a161afbe176.jpg'%3E
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T20:04:22+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001112s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.008918s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000455s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000764s ]
+
+[ 2017-08-26T20:04:53+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T20:04:55+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002813s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.008390s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2017-08-26T20:05:24+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T20:05:25+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.010468s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000616s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000657s ]
+
+[ 2017-08-26T20:25:28+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T20:26:04+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T20:26:14+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T20:26:15+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001419s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.007917s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000604s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2017-08-26T20:28:54+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T20:28:56+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002872s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.025393s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000796s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002492s ]
+
+[ 2017-08-26T20:33:43+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T20:38:44+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T20:38:45+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001431s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.007155s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000413s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001040s ]
+
+[ 2017-08-26T21:50:33+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T21:50:35+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001357s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.009306s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000436s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000637s ]
+
+[ 2017-08-26T21:53:17+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T21:55:33+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T21:55:34+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001402s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.017104s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000529s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001673s ]
+
+[ 2017-08-26T21:59:13+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T21:59:14+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001261s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.008252s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2017-08-26T22:02:37+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:02:39+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001312s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.009279s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2017-08-26T22:03:22+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:03:23+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001478s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.009174s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000323s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2017-08-26T22:04:50+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:04:51+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001710s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.014785s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000918s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001226s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001306s ]
+
+[ 2017-08-26T22:04:59+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:05:00+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.012690s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000759s ]
+
+[ 2017-08-26T22:08:00+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:08:01+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.010147s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000395s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2017-08-26T22:08:37+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:08:38+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001448s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.019926s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.001373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000786s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000839s ]
+
+[ 2017-08-26T22:09:10+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:09:11+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001316s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.008191s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000678s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000694s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2017-08-26T22:09:58+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:10:00+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002673s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.012876s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.001013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001763s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001855s ]
+
+[ 2017-08-26T22:11:31+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:11:32+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001727s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.009057s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2017-08-26T22:20:11+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:20:12+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001443s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.009884s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000397s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000796s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000850s ]
+
+[ 2017-08-26T22:39:41+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/105.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:39:42+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/105.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001384s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.028034s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('105','95') AND `is_on_sale` = '是' ORDER BY FIELD(id,105,95) LIMIT 6   [ RunTime:0.000609s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000872s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000919s ]
+
+[ 2017-08-26T22:42:12+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/105.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+
+[ 2017-08-26T22:43:18+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/105.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:43:19+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/105.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001558s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.012545s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('105','95') AND `is_on_sale` = '是' ORDER BY FIELD(id,105,95) LIMIT 6   [ RunTime:0.000536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000910s ]
+
+[ 2017-08-26T22:43:53+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/105.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:43:54+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/105.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001675s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.011386s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('105','95') AND `is_on_sale` = '是' ORDER BY FIELD(id,105,95) LIMIT 6   [ RunTime:0.003376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000749s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000804s ]
+
+[ 2017-08-26T22:44:07+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/105.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:44:08+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/105.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001223s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.024735s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('105','95') AND `is_on_sale` = '是' ORDER BY FIELD(id,105,95) LIMIT 6   [ RunTime:0.000505s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000709s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2017-08-26T22:45:12+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/105.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:45:13+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/105.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001371s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.011930s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('105','95') AND `is_on_sale` = '是' ORDER BY FIELD(id,105,95) LIMIT 6   [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000640s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2017-08-26T22:47:33+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:47:35+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001582s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.009355s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95','105') AND `is_on_sale` = '是' ORDER BY FIELD(id,95,105) LIMIT 6   [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000701s ]
+
+[ 2017-08-26T22:54:49+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:54:51+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002772s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.008520s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95','105') AND `is_on_sale` = '是' ORDER BY FIELD(id,95,105) LIMIT 6   [ RunTime:0.000475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000748s ]
+
+[ 2017-08-26T22:55:51+08:00 ] 127.0.0.1 /index.php/Home/Index/goods/id/95.html
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsPicModel
+
+[ 2017-08-26T22:55:53+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001985s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.008139s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95','105') AND `is_on_sale` = '是' ORDER BY FIELD(id,95,105) LIMIT 6   [ RunTime:0.000491s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000763s ]
+

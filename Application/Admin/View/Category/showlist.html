@@ -1,0 +1,25 @@
+<layout name="layout"/>
+<div class="form-div">
+</div>
+
+<!-- 商品列表 -->
+<form method="post" action="__SELF__" name="listForm" onsubmit="">
+    <div class="list-div" id="listDiv">
+        <table cellpadding="3" cellspacing="1">
+            <tr>
+                <th>分类名称</th>
+                <th>操作</th>
+            </tr>
+            <?php foreach($data as $k => $v):?>
+            <tr class="tron">
+                <td align="left"><?php echo str_repeat('-',8*$v['level']) .$v['cat_name'];?></td>
+                <td><a href="<?php echo U('edit?id='.$v['id']);?>">修改</a>&nbsp;&nbsp;<a  onclick="return confirm('确定删除吗')" href="<?php echo U('delete?id='.$v['id']);?>" >删除</a></td>
+            </tr>
+            <?php endforeach;?>
+        </table>
+
+    </div>
+</form>
+
+<!--表格换行显示不同颜色-->
+<script type="text/javascript" src="__PUBLIC__/Admin/Js/tron.js"></script>

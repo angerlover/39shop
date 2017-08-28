@@ -1,0 +1,142 @@
+[ 2017-08-25T11:33:58+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+ERR: Think\Model:getgetIdsByCatId方法不存在！
+
+[ 2017-08-25T11:34:12+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+ERR: 错误的查询条件:[goods_id=>Array]
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/base.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/footer.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/common.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/goods.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/header.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/jqzoom.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/bottomnav.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/js/jquery-1.8.3.min.js
+ERR: 非法操作:js
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/js/header.js
+ERR: 非法操作:js
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/js/jqzoom-core.js
+ERR: 非法操作:js
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/global.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/js/goods.js
+ERR: 非法操作:js
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/header.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/global.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/goods.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/base.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/common.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/bottomnav.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/footer.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/style/jqzoom.css
+ERR: 非法操作:style
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/js/jquery-1.8.3.min.js
+ERR: 非法操作:js
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/js/header.js
+ERR: 非法操作:js
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/js/goods.js
+ERR: 非法操作:js
+
+[ 2017-08-25T18:07:43+08:00 ] 127.0.0.1 /index.php/Home/Index/js/jqzoom-core.js
+ERR: 非法操作:js
+
+[ 2017-08-25T23:39:49+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001875s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000757s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000913s ]
+
+[ 2017-08-25T23:52:08+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002246s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000870s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000939s ]
+
+[ 2017-08-25T23:53:39+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000624s ]
+
+[ 2017-08-25T23:55:27+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001820s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000997s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001077s ]
+
+[ 2017-08-25T23:56:00+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001162s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.018406s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.003647s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001799s ]
+
+[ 2017-08-25T23:56:25+08:00 ] 127.0.0.1 /index.php/Home/Index/displayHistory/id/95.html
+INFO: [ app_begin ] --START--
+NOTIC: [2] fopen(./read_html_cache.lock): failed to open stream: No such file or directory D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 31 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\phpStudy\WWW\39shop\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 32 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: DESCRIBE p39_goods [ RunTime:0.008501s ]
+SQL: SELECT `id`,`goods_name`,`sm_logo` FROM `p39_goods` WHERE `id` IN ('95') AND `is_on_sale` = '是' ORDER BY FIELD(id,95) LIMIT 6   [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
