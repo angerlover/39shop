@@ -12,7 +12,12 @@ class MemberController extends Controller
            {
                if ($model->login())
                {
-                   $this->success('登录成功！',U('/'));
+                   $returnUrl = U('/'); // 默认跳回首页
+                   if(session('returnUrl'))
+                   {
+                       $returnUrl = session('returnUrl');
+                   }
+                   $this->success('登录成功！',$returnUrl);
                    exit();
                }
            }

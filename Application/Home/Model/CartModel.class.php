@@ -40,7 +40,7 @@ class CartModel extends Model
     }
 
     /**
-     * 重写父类的表单验证
+     * 重写父类的表单验证,提交加入购物车时把数据存起来
      */
     function add()
     {
@@ -149,7 +149,6 @@ class CartModel extends Model
     {
         // 判断登录状态
         $m_id = session('m_id');
-
         if ($m_id)
         {
             // 从数据库中获取
@@ -162,12 +161,12 @@ class CartModel extends Model
         else
         {
             // 从cookie中获取
-            $_data = $cart = isset($_COOKIE['cart']) ? unserialize($_COOKIE['cart']) : array();
+            $_data = isset($_COOKIE['cart']) ? unserialize($_COOKIE['cart']) : array();
             // 把一维数组转为二维数组,和登录的情况数据结构一致，方便后面统一处理
             $data = array();
             foreach ($_data as $k => $v)
             {
-                $_k = implode('-',$k);
+                $_k = explode('-',$k);
                 $data[] = array(
                     'goods_id' => $_k[0],
                     'goods_attr_id' => $_k[1],

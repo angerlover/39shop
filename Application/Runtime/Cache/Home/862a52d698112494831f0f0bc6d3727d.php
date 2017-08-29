@@ -392,7 +392,7 @@
 				<!-- 商品基本信息区域 start -->
 				<div class="goodsinfo fl ml10">
 					<ul>
-						<li><span>商品编号： </span>971344</li>
+						<li><span>商品编号： </span><?php echo $info['id'];?></li>
 						<li class="market_price"><span>定价：</span><em><?php echo $info['market_price'];?></em></li>
 						<li class="shop_price"><span>本店价：</span><strong><?php echo $info['shop_price'];?></strong> <a href="">(降价通知)</a></li>
 						<li><span>会员价：</span>
@@ -406,7 +406,7 @@
 							</table>
 						</li>
 						<li class="shop_price"><span>购买价格：</span><strong id="real_price"></strong></li>
-						<li><span>上架时间：</span>2012-09-12</li>
+						<li><span>上架时间：</span><?php echo $info['addtime'];?></li>
 						<li class="star"><span>商品评分：</span> <strong></strong><a href="">(已有21人评价)</a></li> <!-- 此处的星级切换css即可 默认为5星 star4 表示4星 star3 表示3星 star2表示2星 star1表示1星 -->
 					</ul>
 					<form action="<?php echo U('Cart/add')?>" method="post" class="choose">

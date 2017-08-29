@@ -3,10 +3,20 @@ namespace Home\Controller;
 use Think\Controller;
 class OrderController extends Controller {
     /**
-     * 从商品详情页添加到购物车
+     * 订单确认
      */
     public function add()
     {
+        // 检查是否登录
+        $m_id = session('m_id');
+        if(!$m_id)
+        {
+            // 没有登录跳到首页,登录后再跳回来
+            session('returnUrl',U('Order/add'));
+            redirect(U('Member/login'));
+
+        }
+
         if(IS_POST)
         {
 //            dump($_POST);die;
