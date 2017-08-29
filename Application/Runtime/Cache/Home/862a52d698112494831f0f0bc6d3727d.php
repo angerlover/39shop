@@ -131,12 +131,12 @@
         <div class="cart fl">
             <dl>
                 <dt>
-                    <a href="">去购物车结算</a>
+                    <a id="cart_list" target="_blank" href="<?php echo U('Cart/lst');?>">去购物车结算</a>
                     <b></b>
                 </dt>
                 <dd>
-                    <div class="prompt">
-                        购物车中还没有商品，赶紧选购吧！
+                    <div id="show_cart_list" class="prompt">
+                        <img src="/Public/Home/images/loading.gif" alt="">
                     </div>
                 </dd>
             </dl>
@@ -199,6 +199,37 @@
 <!-- 头部 end-->
 
 <div style="clear:both;"></div>
+<script>
+    <?php $viewPath = C('IMAGE_CONFIG');?>
+    var viewPath = "<?php echo $viewPath['viewPath'];?>";
+    $('#cart_list').mouseover(function () {
+        $.ajax({
+            type:'get',
+            url:"<?php echo U('Cart/ajaxGetCart');?>",
+            dataType:'json',
+            success:function (data)
+            {
+                console.log(data);
+                // 拼出一个html结构
+                html = '<table>';
+
+                $(data).each(function (k,v) {
+
+                    html += '<tr>';
+                    html += "<td><img src='"+viewPath+v.logo+"'> </td>";
+                    html += "<td>"+v.name+" </td>";
+                    html += '</tr>';
+                })
+
+                html += '</table>';
+
+                $('#show_cart_list').html(html);
+             }
+        });
+    });
+</script>
+
+
 
 
 	<!-- 商品页面主体 start -->
@@ -327,8 +358,9 @@
 				
 				<!-- 图片预览区域 start -->
 				<div class="preview fl">
+					<?php $viewPath = $viewPath['viewPath'];?>
 					<div class="midpic">
-						<a href="/Public/Home/images/preview_l1.jpg" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
+						<a href="<?php echo $viewPath.$info['mbig_logo'];?>" class="jqzoom" rel="gal1">   <!-- 第一幅图片的大图 class 和 rel属性不能更改 -->
 							<img src="<?php echo $viewPath.$info['big_logo'];?>" alt="" />               <!-- 第一幅图片的中图 -->
 						</a>
 					</div>

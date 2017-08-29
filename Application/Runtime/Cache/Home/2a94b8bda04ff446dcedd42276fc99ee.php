@@ -109,12 +109,12 @@
         <div class="cart fl">
             <dl>
                 <dt>
-                    <a href="">去购物车结算</a>
+                    <a id="cart_list" target="_blank" href="<?php echo U('Cart/lst');?>">去购物车结算</a>
                     <b></b>
                 </dt>
                 <dd>
-                    <div class="prompt">
-                        购物车中还没有商品，赶紧选购吧！
+                    <div id="show_cart_list" class="prompt">
+                        <img src="/Public/Home/images/loading.gif" alt="">
                     </div>
                 </dd>
             </dl>
@@ -177,6 +177,37 @@
 <!-- 头部 end-->
 
 <div style="clear:both;"></div>
+<script>
+    <?php $viewPath = C('IMAGE_CONFIG');?>
+    var viewPath = "<?php echo $viewPath['viewPath'];?>";
+    $('#cart_list').mouseover(function () {
+        $.ajax({
+            type:'get',
+            url:"<?php echo U('Cart/ajaxGetCart');?>",
+            dataType:'json',
+            success:function (data)
+            {
+                console.log(data);
+                // 拼出一个html结构
+                html = '<table>';
+
+                $(data).each(function (k,v) {
+
+                    html += '<tr>';
+                    html += "<td><img src='"+viewPath+v.logo+"'> </td>";
+                    html += "<td>"+v.name+" </td>";
+                    html += '</tr>';
+                })
+
+                html += '</table>';
+
+                $('#show_cart_list').html(html);
+             }
+        });
+    });
+</script>
+
+
  <!--首页特有的资源文件-->
  <link rel="stylesheet" href="/Public/Home/style/index.css" type="text/css">
  <script type="text/javascript" src="/Public/Home/js/index.js"></script>

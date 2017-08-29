@@ -23,7 +23,7 @@
 
 <!-- 列表 -->
 <div class="list-div" id="listDiv">
-	<form action="/index.php/Admin/Goods/goods_number/id/106.html" method="post">
+	<form action="/index.php/Admin/Goods/goods_number/id/105.html" method="post">
 	<table cellpadding="3" cellspacing="1">
     	<tr>
 			<?php $gaCount = count($gaData);?>

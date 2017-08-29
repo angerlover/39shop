@@ -141,4 +141,75 @@ class CartModel extends Model
 
         setcookie('cart','',time()-1,'/');
     }
+
+    /**
+     * 获取购物车的数据
+     */
+    function getCartData()
+    {
+        // 判断登录状态
+        $m_id = session('m_id');
+
+        if ($m_id)
+        {
+            // 从数据库中获取
+            $data = $this->field('goods_id,goods_attr_id,goods_number')
+                ->where(array(
+                'member_id' => array('eq',$m_id),
+            ))->select();
+
+        }
+        else
+        {
+            // 从cookie中获取
+            $_data = $cart = isset($_COOKIE['cart']) ? unserialize($_COOKIE['cart']) : array();
+            // 把一维数组转为二维数组,和登录的情况数据结构一致，方便后面统一处理
+            $data = array();
+            foreach ($_data as $k => $v)
+            {
+                $_k = implode('-',$k);
+                $data[] = array(
+                    'goods_id' => $_k[0],
+                    'goods_attr_id' => $_k[1],
+                    'goods_number' => $v,
+                );
+
+            }
+
+        }
+        $gaModel = D('Admin/goods_attr');
+        $goodsModel = D('Admin/goods');
+        // 循环添加购物车需要的数据
+        foreach ($data as $k=>&$v)
+        {
+            // 商品name和logo
+            $info = $goodsModel->field('goods_name,mid_logo')->find($v['goods_id']);
+            $v['name'] = $info['goods_name'];
+            $v['logo'] = $info ['mid_logo'];
+
+            // 商品的实际（实时更新）的价格
+            $v['price'] = $goodsModel->getMemberPrice($v['goods_id']);
+
+
+            // 商品属性
+            if($v['goods_attr_id'])
+            {
+                $v['gaData'] = $gaModel->alias('a')
+                    ->field('a.attr_value,b.attr_name')
+                    ->join('LEFT JOIN __ATTRIBUTE__ b on a.attr_id = b.id')
+                    ->where(array(
+                        'a.id' => array('in',$v['goods_attr_id'])
+                    ))->select();
+            }
+        }
+
+        return $data;
+    }
+
+    function clear()
+    {
+        $this->where(array(
+            'member_id' => array('eq',session('m_id'))
+        ))->delete();
+    }
 }
