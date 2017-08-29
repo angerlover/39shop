@@ -15,6 +15,7 @@ class MemberController extends Controller
                    $returnUrl = U('/'); // 默认跳回首页
                    if(session('returnUrl'))
                    {
+                       session('returnUrl',null);
                        $returnUrl = session('returnUrl');
                    }
                    $this->success('登录成功！',$returnUrl);
