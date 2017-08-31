@@ -60,6 +60,7 @@ class MemberModel extends Model
                 session('level_id',$level_id['id']);
                 session('m_id', $user['id']);
                 session('m_username', $user['username']);
+                session('face','/Public/Home/images/user1.gif');
                 // 把cookie的数据存入数据库
                 $cartModel = D('Home/Cart');
                 $cartModel->moveCookieToDb();

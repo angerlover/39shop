@@ -63,7 +63,7 @@
 <div class="header w1210 bc mt15">
     <!-- 头部上半部分 start 包括 logo、搜索、用户中心和购物车结算 -->
     <div class="logo w1210">
-        <h1 class="fl"><a href="index.html"><img src="/Public/Home/images/logo.png" alt="京西商城"></a></h1> <!-- 头部搜索 start -->
+        <h1 class="fl"><a target="_blank" href="<?php echo U('/');?>"><img src="/Public/Home/images/logo.png" alt="京西商城"></a></h1> <!-- 头部搜索 start -->
         <div class="search fl">
             <div class="search_form">
                 <div class="form_left fl"></div>
@@ -519,115 +519,8 @@
 								</dl>
 							</div>
 						</div>
+						<div id="comment_area">
 
-						<div class="comment_items mt10">
-							<div class="user_pic">
-								<dl>
-									<dt><a href=""><img src="/Public/Home/images/user1.gif" alt="" /></a></dt>
-									<dd><a href="">乖乖</a></dd>
-								</dl>
-							</div>
-							<div class="item">
-								<div class="title">
-									<span>2013-03-11 22:18</span>
-									<strong class="star star5"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-								</div>
-								<div class="comment_content">
-									<dl>
-										<dt>心得：</dt>
-										<dd>东西挺好，挺满意的！</dd>
-									</dl>
-									<dl>
-										<dt>优点：</dt>
-										<dd>反应速度开，散热性能好</dd>
-									</dl>
-									<dl>
-										<dt>不足：</dt>
-										<dd>暂时还没发现缺点哦！</dd>
-									</dl>
-									<dl>
-										<dt>购买日期：</dt>
-										<dd>2013-11-24</dd>
-									</dl>
-								</div>
-								<div class="btns">
-									<a href="" class="reply">回复(0)</a>
-									<a href="" class="useful">有用(0)</a>
-								</div>
-							</div>
-							<div class="cornor"></div>
-						</div>
-
-						<div class="comment_items mt10">
-							<div class="user_pic">
-								<dl>
-									<dt><a href=""><img src="/Public/Home/images/user2.jpg" alt="" /></a></dt>
-									<dd><a href="">小宝贝</a></dd>
-								</dl>
-							</div>
-							<div class="item">
-								<div class="title">
-									<span>2013-10-01 14:10</span>
-									<strong class="star star4"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-								</div>
-								<div class="comment_content">
-									<dl>
-										<dt>心得：</dt>
-										<dd>外观漂亮同，还在使用过程中。</dd>
-									</dl>
-									<dl>
-										<dt>型号：</dt>
-										<dd>i5 8G内存版</dd>
-									</dl>
-									<dl>
-										<dt>购买日期：</dt>
-										<dd>2013-11-20</dd>
-									</dl>
-								</div>
-								<div class="btns">
-									<a href="" class="reply">回复(0)</a>
-									<a href="" class="useful">有用(0)</a>
-								</div>
-							</div>
-							<div class="cornor"></div>
-						</div>
-
-						<div class="comment_items mt10">
-							<div class="user_pic">
-								<dl>
-									<dt><a href=""><img src="/Public/Home/images/user3.jpg" alt="" /></a></dt>
-									<dd><a href="">天使</a></dd>
-								</dl>
-							</div>
-							<div class="item">
-								<div class="title">
-									<span>2013-03-11 22:18</span>
-									<strong class="star star5"></strong> <!-- star5表示5星级 start4表示4星级，以此类推 -->
-								</div>
-								<div class="comment_content">
-									<dl>
-										<dt>心得：</dt>
-										<dd>挺好的，物超所值，速度挺好，WIN8用起来也不错。</dd>
-									</dl>
-									<dl>
-										<dt>优点：</dt>
-										<dd>散热很好，配置不错</dd>
-									</dl>
-									<dl>
-										<dt>不足：</dt>
-										<dd>暂时还没发现缺点哦！</dd>
-									</dl>
-									<dl>
-										<dt>购买日期：</dt>
-										<dd>2013-11-24</dd>
-									</dl>
-								</div>
-								<div class="btns">
-									<a href="" class="reply">回复(0)</a>
-									<a href="" class="useful">有用(0)</a>
-								</div>
-							</div>
-							<div class="cornor"></div>
 						</div>
 
 						<!-- 分页信息 start -->
@@ -646,24 +539,25 @@
 
 						<!--  评论表单 start-->
 						<div class="comment_form mt20">
-							<form action="">
+							<form id="comment_form">
+								<input type="hidden" name="goods_id" value="<?php echo $info['id'];?>">
 								<ul>
 									<li>
 										<label for=""> 评分：</label>
-										<input type="radio" name="grade"/> <strong class="star star5"></strong>
-										<input type="radio" name="grade"/> <strong class="star star4"></strong>
-										<input type="radio" name="grade"/> <strong class="star star3"></strong>
-										<input type="radio" name="grade"/> <strong class="star star2"></strong>
-										<input type="radio" name="grade"/> <strong class="star star1"></strong>
+										<input value="5" type="radio" name="star"/> <strong class="star star5"></strong>
+										<input value="5" type="radio" name="star"/> <strong class="star star4"></strong>
+										<input value="5" type="radio" name="star"/> <strong class="star star3"></strong>
+										<input value="5" type="radio" name="star"/> <strong class="star star2"></strong>
+										<input value="5" type="radio" name="star"/> <strong class="star star1"></strong>
 									</li>
 
 									<li>
 										<label for="">评价内容：</label>
-										<textarea name="" id="" cols="" rows=""></textarea>
+										<textarea name="content" id="" cols="" rows=""></textarea>
 									</li>
 									<li>
 										<label for="">&nbsp;</label>
-										<input type="submit" value="提交评论"  class="comment_btn"/>										
+										<input type="button" value="提交评论"  class="comment_btn"/>
 									</li>
 								</ul>
 							</form>
@@ -822,6 +716,110 @@
 			$('#real_price').html('Y'+data+'元');
         }
 		});
+
+// 发表评论
+	$('.comment_btn').click(function () {
+
+	    var commentForm = $('#comment_form');
+	    var commentData = commentForm.serialize();
+		$.ajax({
+		            type:'post',
+		            url:"<?php echo U('Comment/add');?>",
+					data: commentData,
+		            dataType:'json',
+		            success:function (data)
+		            {
+		               // 如果没成功
+						if (data.status == 0)
+						{
+						    $('#dialog_login').dialog('open');
+						}
+						else
+						{
+
+                            // 触发reset 清空表单的内容
+                            commentForm.trigger('reset');
+                            alert(data);
+                            var html = '<div class="comment_items mt10 none"><div class="user_pic"><dl><dt><a href=""><img src="'+data.info.face+'" alt="" /></a></dt><dd><a href="">'+data.info.username+'</a></dd></dl></div><div class="item"><div class="title"><span>'+data.info.addtime+'</span><strong class="star star'+data.info.star+'"></strong></div><div class="comment_content">'+data.info.content+'</div><div class="btns"><a href="javascript:void(0);" onclick="do_reply(this,'+data.info.id+');" class="reply">回复(0)</a><a href="" class="useful">有用(0)</a></div><div class="reply_form"></div><ul class="reply_container"></ul></div><div class="cornor"></div></div>';
+                            html = $(html); // 转换为jquery对象
+                            $('#comment_area').prepend(html);
+                            $('body').animate(
+                                {'scrollTop':'750px'},
+                                1000,
+                                function () {
+                                    html.fadeIn(2000);
+                                });
+                        }
+
+		            }
+
+		        });
+    });
+</script>
+<!--jquery ui的表单-->
+<link href="/Public/jquery-ui-1.9.2.custom/css/blitzer/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+<script src="/Public/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.js"></script>
+<!--做一个登录的表单-->
+<div id="dialog_login" class="none" title="登录">
+	<form id="login_form">
+		<ul>
+			<li>
+				<label for="">用户名：</label>
+				<input type="text" class="txt" name="username" />
+			</li>
+			<li>
+				<label for="">密码：</label>
+				<input type="password" class="txt" name="password" />
+				<a href="">忘记密码?</a>
+			</li>
+			<li class="checkcode">
+				<label for="">验证码：</label>
+				<input type="text"  name="chkcode" />
+				<img style="cursor: pointer" onclick="this.src='<?php echo U('Member/chkcode');?>#'+Math.random()" src="<?php echo U('Member/chkcode');?>" alt="" />
+				<span>看不清？<a href="">换一张</a></span>
+			</li>
+		</ul>
+	</form>
+</div>
+<!--配置jquery ui的登录表单-->
+<script>
+
+	$('#dialog_login').dialog({
+        resizable : false,
+        position : {at: "center"},
+        modal : true,
+        autoOpen: false,
+        width: 400,
+		buttons:[
+			{
+			    text:'登录',
+				click:function () {
+					/*ajax登录网站*/
+					$.ajax({
+					            type:'post',
+					            url:"<?php echo U('Member/login');?>",
+								data:$('#login_form').serialize(),
+					            dataType:'json',
+					            success:function (data)
+					            {
+                                    if(data.status == 1)
+                                    {
+                                        $( "#dialog_login" ).dialog( "close" );
+                                    }
+                                    else
+                                        alert(data.info);
+					            }
+					        });
+                },
+			},
+			{
+                text:'取消',
+                click:function () {
+					$(this).dialog('close');
+                },
+			}
+		]
+	});
 </script>
 
 <div style="clear:both;"></div>

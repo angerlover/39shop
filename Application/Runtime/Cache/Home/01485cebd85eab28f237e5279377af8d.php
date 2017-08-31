@@ -45,7 +45,7 @@
 <div class="header w1210 bc mt15">
     <!-- 头部上半部分 start 包括 logo、搜索、用户中心和购物车结算 -->
     <div class="logo w1210">
-        <h1 class="fl"><a href="index.html"><img src="/Public/Home/images/logo.png" alt="京西商城"></a></h1> <!-- 头部搜索 start -->
+        <h1 class="fl"><a target="_blank" href="<?php echo U('/');?>"><img src="/Public/Home/images/logo.png" alt="京西商城"></a></h1> <!-- 头部搜索 start -->
         <div class="search fl">
             <div class="search_form">
                 <div class="form_left fl"></div>
@@ -440,7 +440,7 @@
 					<dl>
 						<dt>品牌：</dt>
 						<?php foreach($searchData['brand'] as $k=> $v):?>
-						<dd><a href="/index.php/Home/Search/key_search/key/%E5%8A%A0%E6%8B%BF%E5%A4%A7/brand_id/<?php echo $v['brand_id'];?>-<?php echo $v['brand_name'];?>"><?php echo $v['brand_name']?></a></dd>
+						<dd><a href="/index.php/Home/Search/key_search/key/index.html/brand_id/<?php echo $v['brand_id'];?>-<?php echo $v['brand_name'];?>"><?php echo $v['brand_name']?></a></dd>
 						<?php endforeach;?>
 					</dl>
 					<?php endif;?>
@@ -448,7 +448,7 @@
 					<dl>
 						<dt>价格：</dt>
 						<?php foreach($searchData['price'] as $k=> $v):?>
-						<dd><a href="/index.php/Home/Search/key_search/key/%E5%8A%A0%E6%8B%BF%E5%A4%A7/price/<?php echo $v;?>"><?php echo $v?></a></dd>
+						<dd><a href="/index.php/Home/Search/key_search/key/index.html/price/<?php echo $v;?>"><?php echo $v?></a></dd>
 						<?php endforeach;?>
 					</dl>
 					<?php endif;?>
@@ -457,7 +457,7 @@
 					<dl>
 						<dt><?php echo $k;?>:</dt>
 						<?php foreach($v as $k1=> $v1):?>
-						<dd ><a href="/index.php/Home/Search/key_search/key/%E5%8A%A0%E6%8B%BF%E5%A4%A7/<?php echo $attrName;?>/<?php echo $v1['attr_value'];?>-<?php echo $k;?>"><?php echo $v1['attr_value'];?></a> </dd>
+						<dd ><a href="/index.php/Home/Search/key_search/key/index.html/<?php echo $attrName;?>/<?php echo $v1['attr_value'];?>-<?php echo $k;?>"><?php echo $v1['attr_value'];?></a> </dd>
 						<?php endforeach;?>
 					</dl>
 					<?php endforeach;?>

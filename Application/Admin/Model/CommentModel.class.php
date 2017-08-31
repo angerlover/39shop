@@ -12,4 +12,20 @@ class CommentModel extends Model
 		array('content', '1,200', '评论内容在200以内！', 1, 'length'),
 	);
 
+	protected function _before_insert(&$data, $options)
+    {
+        // 判断登录
+        $memberId = session('m_id');
+        if (!$memberId)
+        {
+            $this->error='必须登录才能评论!';
+            return false;
+        }
+
+        // 添加几个必要的字段
+        $data['member_id'] = $memberId;
+        $data['addtime'] = date('Y-m-d H:i:s');
+
+
+    }
 }
