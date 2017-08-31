@@ -231,7 +231,7 @@
 			<div class="filter mt10">
 				<h2><a href="">重置筛选条件</a> <strong>商品筛选</strong></h2>
 				<div class="filter_wrap">
-					<?php if(!I('get.brand_id')): ?>
+					<?php if(!I('get.brand_id') && $searchData['brand']): ?>
 					<dl>
 						<dt>品牌：</dt>
 						<?php foreach($searchData['brand'] as $k=> $v):?>

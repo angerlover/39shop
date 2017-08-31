@@ -436,11 +436,11 @@
 			<div class="filter mt10">
 				<h2><a href="">重置筛选条件</a> <strong>商品筛选</strong></h2>
 				<div class="filter_wrap">
-					<?php if(!I('get.brand_id')): ?>
+					<?php if(!I('get.brand_id') && $searchData['brand']): ?>
 					<dl>
 						<dt>品牌：</dt>
 						<?php foreach($searchData['brand'] as $k=> $v):?>
-						<dd><a href="/index.php/Home/Search/cat_search/cat_id/1/brand_id/<?php echo $v['brand_id'];?>-<?php echo $v['brand_name'];?>"><?php echo $v['brand_name']?></a></dd>
+						<dd><a href="/index.php/Home/Search/key_search/key/%E5%8A%A0%E6%8B%BF%E5%A4%A7/brand_id/<?php echo $v['brand_id'];?>-<?php echo $v['brand_name'];?>"><?php echo $v['brand_name']?></a></dd>
 						<?php endforeach;?>
 					</dl>
 					<?php endif;?>
@@ -448,7 +448,7 @@
 					<dl>
 						<dt>价格：</dt>
 						<?php foreach($searchData['price'] as $k=> $v):?>
-						<dd><a href="/index.php/Home/Search/cat_search/cat_id/1/price/<?php echo $v;?>"><?php echo $v?></a></dd>
+						<dd><a href="/index.php/Home/Search/key_search/key/%E5%8A%A0%E6%8B%BF%E5%A4%A7/price/<?php echo $v;?>"><?php echo $v?></a></dd>
 						<?php endforeach;?>
 					</dl>
 					<?php endif;?>
@@ -457,7 +457,7 @@
 					<dl>
 						<dt><?php echo $k;?>:</dt>
 						<?php foreach($v as $k1=> $v1):?>
-						<dd ><a href="/index.php/Home/Search/cat_search/cat_id/1/<?php echo $attrName;?>/<?php echo $v1['attr_value'];?>-<?php echo $k;?>"><?php echo $v1['attr_value'];?></a> </dd>
+						<dd ><a href="/index.php/Home/Search/key_search/key/%E5%8A%A0%E6%8B%BF%E5%A4%A7/<?php echo $attrName;?>/<?php echo $v1['attr_value'];?>-<?php echo $k;?>"><?php echo $v1['attr_value'];?></a> </dd>
 						<?php endforeach;?>
 					</dl>
 					<?php endforeach;?>

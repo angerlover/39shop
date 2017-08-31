@@ -598,7 +598,8 @@ class GoodsModel extends Model {
     /**
      * 获取某个分类某一页的商品
      */
-    public function cat_search($catId, $page = 15) {
+    public function cat_search($catId, $pageSize=20)
+    {
         /*******1 搜索*******/
         $where = array();
         // 最基本条件：取出本分类下的商品id
@@ -662,7 +663,40 @@ class GoodsModel extends Model {
         {
             $where['a.goods_id'] = array('in',$attrGoodsIds);
         }
-        /***************3 取数据 ********************/
+
+        /**********2 分页 ******************/
+
+        $count = $this->alias('a')->field('count(a.id) goods_count,GROUP_CONCAT(a.id) goods_ids')
+            ->where($where)
+            ->find();
+        // 把所有的商品id单独存起来
+        $data['goods_ids'] = explode(',',$count['goods_ids']);
+        $page = new \Think\Page($count['goods_count'],$pageSize);
+        $page->setConfig('prev','上一页');
+        $page->setConfig('next','下一页');
+        $data['page'] = $page->show();
+        /**************3 排序****************/
+
+        $orderBy = 'xl';
+        $orderWay = 'desc';
+        $odby = I('get.odby');
+        if ($odby)
+        {
+            if ($odby=='addtime')
+            {
+                $orderBy = 'a.addtime';
+            }
+            if (strpos($odby,'price_')===0)
+            {
+                $orderBy = 'a.shop_price';
+                if ($odby == 'price_asc')
+                {
+                    $orderWay = 'asc';
+                }
+            }
+        }
+
+        /***************4 取数据 ********************/
 
         $ogModel = D('Admin/order_goods');
         $data['data'] = $this->alias('a')
@@ -672,9 +706,139 @@ class GoodsModel extends Model {
             b.order_id in (select id from p39_order where pay_status = "是"))')
             ->where($where)
             ->group('a.id')
+            ->limit($page->firstRow.','.$page->listRows)
+            ->order("$orderBy $orderWay")
             ->select();
 
         return $data;
     }
 
+    /**
+     * @param $catId
+     * @param int $pageSize
+     * @return mixed
+     * 根据关键字搜索商品
+     */
+    public function key_search($key, $pageSize=20)
+    {
+        /*******1 搜索*******/
+        $where = array();
+        $goodsId = $this->alias('a')
+            ->field('GROUP_CONCAT(DISTINCT a.id) gids')
+            ->join('LEFT JOIN __GOODS_ATTR__ b ON a.id=b.goods_id')
+            ->where(array(
+                'a.is_on_sale' => array('eq', '是'),
+                'a.goods_name' => array('exp', " LIKE '%$key%' OR a.goods_desc LIKE '%$key%' OR attr_value LIKE '%$key%'"),
+            ))
+            ->find();
+        $goodsId = explode(',', $goodsId['gids']);
+
+        $where['a.id'] = array('in', $goodsId);
+        // 1.1 品牌
+        $brandId = I('get.brand_id');
+        if ($brandId) {
+            $where['a.brand_id'] = array('eq', (int)$brandId);
+        }
+        // 1.2 价格
+        $price = I('get.price');
+        if ($price) {
+            $where['a.shop_price'] = array('between', explode('-', $price));
+        }
+
+        // 1.3 商品属性的搜索
+        $gaModel = D('Admin/goods_attr');
+        $attrGoodsIds = null; // 记录所有复合属性的商品id
+        // 只能遍历所有的GET参数
+        foreach ($_GET as $k => $v) {
+            if (strpos($k, 'attr_') === 0) // 说明是需要寻找的属性
+            {
+                $attrId = strrchr($k, '_');
+                $attrName = strrchr($v, '-');
+                $attrValue = str_replace($attrName, '', $v);
+
+                // 1.3.1 取商品以,分隔在一个字符串里面
+                $gids = $gaModel->field('GROUP_CONCAT(goods_id) gids')
+                    ->where(array(
+                        'attr_id' => array('eq', $attrId),
+                        'attr_value' => array('eq', $attrValue)
+                    ))->find();
+
+                // 1.3.2 判断商品是否存在
+                if ($gids['gids']) {
+                    $gids = explode(',', $gids['gids']);
+                    // 第一次搜索条件初始化一下
+                    if ($attrGoodsIds === null) {
+                        $attrGoodsIds[] = explode(',', $gids);
+                    }
+                    // 和上一次的取交集
+                    $attrGoodsIds = array_intersect($attrGoodsIds, $gids);
+
+                    // 1.3.3 判断交集是否存在
+                    if (empty($attrGoodsIds)) {
+                        $where['a.goods_id'] = array('eq', -1);
+                        break;
+                    }
+                } else {
+                    // 没有取出商品，则后面的foreach就不用继续了
+                    $attrGoodsIds = array();
+                    $where['a.goods_id'] = array('eq', -1);
+                    break;
+                }
+            }
+        }
+
+        // 1.3.4 如果此时数组还不为空则说明属性交集存在了
+        if ($attrGoodsIds)
+        {
+            $where['a.goods_id'] = array('in',$attrGoodsIds);
+        }
+
+        /**********2 分页 ******************/
+
+        $count = $this->alias('a')->field('count(a.id) goods_count,GROUP_CONCAT(a.id) goods_ids')
+            ->where($where)
+            ->find();
+        // 把所有的商品id单独存起来
+        $data['goods_ids'] = explode(',',$count['goods_ids']);
+        $page = new \Think\Page($count['goods_count'],$pageSize);
+        $page->setConfig('prev','上一页');
+        $page->setConfig('next','下一页');
+        $data['page'] = $page->show();
+        /**************3 排序****************/
+
+        $orderBy = 'xl';
+        $orderWay = 'desc';
+        $odby = I('get.odby');
+        if ($odby)
+        {
+            if ($odby=='addtime')
+            {
+                $orderBy = 'a.addtime';
+            }
+            if (strpos($odby,'price_')===0)
+            {
+                $orderBy = 'a.shop_price';
+                if ($odby == 'price_asc')
+                {
+                    $orderWay = 'asc';
+                }
+            }
+        }
+
+        /***************4 取数据 ********************/
+
+        $ogModel = D('Admin/order_goods');
+        $data['data'] = $this->alias('a')
+            ->field('a.id,a.mid_logo,a.goods_name,a.shop_price,SUM(b.goods_number) xl')
+            ->join('LEFT JOIN __ORDER_GOODS__ b on 
+            (a.id = b.goods_id and
+            b.order_id in (select id from p39_order where pay_status = "是"))')
+            ->where($where)
+            ->group('a.id')
+            ->limit($page->firstRow.','.$page->listRows)
+            ->order("$orderBy $orderWay")
+            ->select();
+
+        return $data;
+    }
 }

@@ -76,7 +76,7 @@
 </div>
 
 <!-- 商品列表 -->
-<form method="post" action="/index.php/Admin/Goods/showlist/catid/1/odby/id_desc/p/3.html" name="listForm" onsubmit="">
+<form method="post" action="/index.php/Admin/Goods/showlist.html" name="listForm" onsubmit="">
     <div class="list-div" id="listDiv">
         <table cellpadding="3" cellspacing="1">
             <tr>

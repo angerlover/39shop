@@ -219,22 +219,22 @@ class CategoryModel extends Model
 
     /**
      * @param $catId
-     * 根据分类id获取前台搜索条件
+     * 根据当前搜索出来的商品来获取所有的搜索条件
      */
-    function getSearchConditionByCatId($catId)
+    function getSearchConditionByGoodsIds($goodsIds)
     {
         $res = array();
         /**********品牌***********/
         $goodsModel = D('Admin/goods');
-        // 获取当前分类下的所有商品id
-        $ids = $goodsModel->getIdsByCatId($catId);
+//        // 获取当前分类下的所有商品id
+//        $ids = $goodsModel->getIdsByCatId($catId);
 
         $res['brand'] = $goodsModel
             ->alias('a')
             ->field('DISTINCT brand_id,b.brand_name,b.logo')
             ->join('LEFT JOIN __BRAND__ b on a.brand_id = b.id')
             ->where(array(
-                'a.id'=>array('in',$ids),
+                'a.id'=>array('in',$goodsIds),
                 'a.brand_id'=>array('neq',0), // 品牌id不为0
             ))->select();
 
@@ -242,11 +242,11 @@ class CategoryModel extends Model
         $sectionCount = 6; // 默认6个区间段
         $priceInfo = $goodsModel->field('MAX(shop_price) max_price,MIN(shop_price) min_price')
             ->where(array(
-            'id' => array('in',$ids)
+            'id' => array('in',$goodsIds)
         ))->find();
         // 价格区间
         $priceSection = $priceInfo['max_price'] - $priceInfo['min_price'];
-        $goodsCount = count($ids);
+        $goodsCount = count($goodsIds);
 
         // 根据价格极差计算分几段
         if($goodsCount > 1)
@@ -280,7 +280,7 @@ class CategoryModel extends Model
             ->field('DISTINCT a.attr_id,a.attr_value,b.attr_name')
             ->join('LEFT JOIN __ATTRIBUTE__ b on a.attr_id = b.id')
             ->where(array(
-                'a.goods_id' => array('in',$ids),
+                'a.goods_id' => array('in',$goodsIds),
                 'a.attr_value' => array('neq','')
             ))->select();
 
