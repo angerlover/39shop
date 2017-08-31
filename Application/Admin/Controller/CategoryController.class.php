@@ -45,7 +45,7 @@ class CategoryController extends BaseController {
     /**
      * 商品列表页
      */
-    function showlist() {
+    function lst() {
 
         $model = D('category');
         $data = $model->getTree();

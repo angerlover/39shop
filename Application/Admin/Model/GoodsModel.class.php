@@ -80,12 +80,10 @@ class GoodsModel extends Model {
             'goods_id' => array('eq', $id),
         ))->delete();
 
-        if($catIds)
-        {
-            foreach ($catIds as $k => $v)
-            {
-                if(empty($v))
-                    continue ;
+        if ($catIds) {
+            foreach ($catIds as $k => $v) {
+                if (empty($v))
+                    continue;
                 $gcModel->add(array(
                     'cat_id' => $v,
                     'goods_id' => $id,
@@ -182,29 +180,28 @@ class GoodsModel extends Model {
         $gaid = I('post.goods_attr_id'); // 商品属性表
         $attrValue = I('post.attr_value');
         $_i = 0;
-        foreach ($attrValue as $k => $v){
+        foreach ($attrValue as $k => $v) {
 
-            foreach($v as $k1=>$v1){
+            foreach ($v as $k1 => $v1) {
 
 //                $res = $gaModel->execute("replace into p39_goods_attr
 //                values($gaid[$_i],$id,$k,$v1)
 //
 //              ");
-                if($gaid[$_i] == ''){ // 添加的情况
+                if ($gaid[$_i] == '') { // 添加的情况
 //                    dump($k);die;
-                    if ($v1!='')
-                    {
+                    if ($v1 != '') {
                         $gaModel->add(array(
-                            'goods_id'=>$id,
-                            'attr_id'=>$k,
-                            'attr_value'=>$v1,
+                            'goods_id' => $id,
+                            'attr_id' => $k,
+                            'attr_value' => $v1,
                         ));
                     }
 
-                }else{ // 修改的情况
+                } else { // 修改的情况
                     $gaModel->where(array(
-                        'id'=>array('eq',$gaid[$_i])
-                    ))->setField('attr_value',$v1);
+                        'id' => array('eq', $gaid[$_i])
+                    ))->setField('attr_value', $v1);
 
                 }
                 // 这个$_i的位置！！！！！！！！！！！！！！！！！！！！！！！！！！！
@@ -226,15 +223,15 @@ class GoodsModel extends Model {
         // 删除商品库存！
         $gnModel = D('goods_number');
         $gnModel->where(array(
-            'goods_id'=>array('eq',$id),
+            'goods_id' => array('eq', $id),
         ))->delete();
         // 删除商品属性
         D('goods_attr')->where(array(
-            'goods_id'=>array('eq',$id)
+            'goods_id' => array('eq', $id)
         ))->delete();
         // 删除扩展分类
         D('goods_cat')->where(array(
-            'goods_id'=>array('eq',$id)
+            'goods_id' => array('eq', $id)
         ))->delete();
 
         // 删除五个logo
@@ -245,7 +242,7 @@ class GoodsModel extends Model {
         $mpModel = D('member_price');
         $mpModel->where(  // 根据id删除会员价格
             array(
-                'goods_id' => array('eq',$id)
+                'goods_id' => array('eq', $id)
             )
         )->delete();
         // 删除相册
@@ -253,17 +250,17 @@ class GoodsModel extends Model {
             'goods_id' => array('eq', $id),
         ))->select();
         // 相册硬盘删除
-        foreach ($pic_info as $k=>$v){
+        foreach ($pic_info as $k => $v) {
             deleteImage($v);
         }
         // 相册数据库删除
-        D('goods_pic')->where(array('goods_id'=>array('eq',$id)))->delete();
+        D('goods_pic')->where(array('goods_id' => array('eq', $id)))->delete();
     }
 
     /**
      * 搜索 分页 排序
      */
-    function search($perPage = 20){
+    function search($perPage = 15) {
         //1 搜索
         $where = array(); // 1.1搜索条件数组
 
@@ -271,45 +268,45 @@ class GoodsModel extends Model {
         // 1.2判断搜索的条件
         // 品牌
         $bid = I('get.brand_id');
-        if($bid){
-            $where['a.brand_id'] = array('eq',$bid);
+        if ($bid) {
+            $where['a.brand_id'] = array('eq', $bid);
         }
         $gn = I('get.gn');
-        if ($gn){ // 1.2.1商品名称
-            $where['a.goods_name'] = array('like',"%$gn%");
+        if ($gn) { // 1.2.1商品名称
+            $where['a.goods_name'] = array('like', "%$gn%");
         }
         //1.2.2 价格
         $fp = I('get.fp');
         $tp = I('get.tp');
-        if ($fp && $tp){
-            $where['a.shop_price'] = array('between',array($fp,$tp));
-        }elseif($fp){
-            $where['a.shop_price'] = array('egt',$fp);
-        }elseif($tp){
-            $where['a.shop_price'] = array('elt',$tp);
+        if ($fp && $tp) {
+            $where['a.shop_price'] = array('between', array($fp, $tp));
+        } elseif ($fp) {
+            $where['a.shop_price'] = array('egt', $fp);
+        } elseif ($tp) {
+            $where['a.shop_price'] = array('elt', $tp);
         }
 
         // 1.2.3 是否上架
         $ios = I('get.ios');
-        if($ios){
-            $where['a.is_on_sale'] = array('eq',$ios); // where is_on_sale = ''
+        if ($ios) {
+            $where['a.is_on_sale'] = array('eq', $ios); // where is_on_sale = ''
         }
 
         // 1.2.4 添加时间
         $ft = I('ft');
         $tt = I('tt');
-        if ($ft && $tt){
-            $where['a.addtime'] = array('between',array($ft,$tt));
-        }elseif($ft){
-            $where['a.addtime'] = array('egt',$ft);
-        }elseif($tt){
-            $where['a.addtime'] = array('elt',$tt);
+        if ($ft && $tt) {
+            $where['a.addtime'] = array('between', array($ft, $tt));
+        } elseif ($ft) {
+            $where['a.addtime'] = array('egt', $ft);
+        } elseif ($tt) {
+            $where['a.addtime'] = array('elt', $tt);
         }
         // 商品分类
         $catid = I('get.catid');
-        if ($catid){
-           $ids = $this->getIdsByCatId($catid);
-           $where['a.id'] = array('in',$ids);
+        if ($catid) {
+            $ids = $this->getIdsByCatId($catid);
+            $where['a.id'] = array('in', $ids);
         }
 
         //2 排序
@@ -317,28 +314,31 @@ class GoodsModel extends Model {
         $orderWay = 'desc';
         $odby = I('get.odby');
 
-        if($odby){
-            if($odby == 'id_asc'){
+        if ($odby) {
+            if ($odby == 'id_asc') {
                 $orderWay = 'asc';
-            }elseif($odby == 'p_desc'){
+            } elseif ($odby == 'p_desc') {
                 $orderBy = 'a.shop_price';
-            }elseif($odby == 'p_asc'){
+            } elseif ($odby == 'p_asc') {
                 $orderBy = 'a.shop_price';
                 $orderWay = 'asc';
             }
         }
 
+//        dump($where);die;
         //2 分页
         // 获取所有记录条数
-        $cnt = $this->where($where)->count();
+        $cnt = $this->alias('a')->where($where)->count();
+//        dump($this->getLastSql());die;
+//        dump($cnt);die;
         // 实例化分页对象
-        $page = new \Think\Page($cnt,$perPage);
+        $page = new \Think\Page($cnt, $perPage);
         // 美化分页
-        $page->setConfig('prev','上一页');
-        $page->setConfig('next','下一页');
+        $page->setConfig('prev', '上一页');
+        $page->setConfig('next', '下一页');
         // 上一页下一页的效果
         $pageString = $page->show();
-
+//        dump($pageString);die;
 
 
         // 返回数据
@@ -351,7 +351,7 @@ class GoodsModel extends Model {
                     LEFT JOIN __CATEGORY__ e on d.cat_id = e.id
                     ')
             ->where($where)
-            ->limit($page->firstRow.','.$page->listRows)
+            ->limit($page->firstRow . ',' . $page->listRows)
             ->group('a.id')
             ->select();
 
@@ -373,19 +373,19 @@ class GoodsModel extends Model {
         $attrValue = I('post.attr_value');
 //        dump($attrValue);die;
         $gaModel = D('goods_attr'); // 商品模型
-        foreach ($attrValue as $k => $v){
-             // 去重
-                $v = array_unique($v);
-                 // 属性没填的就不要入库了
-                    foreach($v as $k1 => $v1) {
-                        if ($v1 != '') {
-                        $gaModel->add(array(
-                            'goods_id' => $data['id'],
-                            'attr_id' => $k,
-                            'attr_value' => $v1,
-                        ));
-                    }
-                    }
+        foreach ($attrValue as $k => $v) {
+            // 去重
+            $v = array_unique($v);
+            // 属性没填的就不要入库了
+            foreach ($v as $k1 => $v1) {
+                if ($v1 != '') {
+                    $gaModel->add(array(
+                        'goods_id' => $data['id'],
+                        'attr_id' => $k,
+                        'attr_value' => $v1,
+                    ));
+                }
+            }
 
         }
 
@@ -393,33 +393,32 @@ class GoodsModel extends Model {
         $extCatModel = D('goods_cat');
         $extCatData = I('post.ext_cat_id');
         // 插入
-        if ($extCatData){ // 判断有没有
-            foreach ($extCatData as $k=>$v){
-                if(empty($v)){ // 如果没选择 跳过
+        if ($extCatData) { // 判断有没有
+            foreach ($extCatData as $k => $v) {
+                if (empty($v)) { // 如果没选择 跳过
                     continue;
                 }
                 $extCatModel->add(array(
-                    'goods_id'=>$data['id'],
-                    'cat_id'=>$v
+                    'goods_id' => $data['id'],
+                    'cat_id' => $v
                 ));
             }
 
         }
 
 
-
         // 获取商品id插入到会员价格中
         $mp = I('post.member_price');
         $mpModel = D('member_price');
-        foreach ($mp as $k=>$v){
+        foreach ($mp as $k => $v) {
 
             // 判断去除不合理的数字
             $_v = (float)$v;
-            if ($_v > 0){
+            if ($_v > 0) {
                 $mpModel->add(array(
-                        'price'=>$v,
-                        'level_id'=>$k,
-                        'goods_id'=>$data['id'],
+                        'price' => $v,
+                        'level_id' => $k,
+                        'goods_id' => $data['id'],
                     )
                 );
             }
@@ -430,7 +429,7 @@ class GoodsModel extends Model {
 
         // 处理表单提交的相册
         $pics = array(); // 待生成的数组(传了几张图里面就有几个元素，当然是二维的)
-        foreach ($_FILES['pic']['name'] as $k=>$v){ // 其实这里面选择name type什么亦可
+        foreach ($_FILES['pic']['name'] as $k => $v) { // 其实这里面选择name type什么亦可
             $pics[] = array(
                 'name' => $v,
                 'type' => $_FILES['pic']['type'][$k],
@@ -445,37 +444,37 @@ class GoodsModel extends Model {
         // 模型
         $gpModel = D('goods_pic');
         // 循环遍历上传
-        foreach ($pics as $k => $v){
-                if ($v['error']==0){
-                    $res = uploadOne($k,'Goods',array(
-                        array(650,650),
-                        array(350,350),
-                        array(50,50),
+        foreach ($pics as $k => $v) {
+            if ($v['error'] == 0) {
+                $res = uploadOne($k, 'Goods', array(
+                    array(650, 650),
+                    array(350, 350),
+                    array(50, 50),
 
-                    ));
+                ));
 
-                    // 判断是否上传成功
-                    if ($res['ok'] == 1){
-                        $gpModel->add(array(
-                                'pic' => $res['images'][0],
-                                'big_pic' => $res['images'][1],
-                                'mid_pic' => $res['images'][2],
-                                'sm_pic' => $res['images'][3],
-                                'goods_id' => $data['id']
-                            )
-                        );
-                    }
+                // 判断是否上传成功
+                if ($res['ok'] == 1) {
+                    $gpModel->add(array(
+                            'pic' => $res['images'][0],
+                            'big_pic' => $res['images'][1],
+                            'mid_pic' => $res['images'][2],
+                            'sm_pic' => $res['images'][3],
+                            'goods_id' => $data['id']
+                        )
+                    );
                 }
+            }
 
         }
 
 
-
     }
+
     /*
      * 根据分类id查找包括主分类和扩展分类的商品id
      */
-    function getIdsByCatId($catId){
+    function getIdsByCatId($catId) {
 
         // 1主分类
         // 1.1 还要获取所有当前id子分类，也要一并搜索出来
@@ -484,29 +483,29 @@ class GoodsModel extends Model {
 
         // 1.2 查询
         $gids = $this->field('id')->where(array(
-            'cat_id'=>array('in',$children),
+            'cat_id' => array('in', $children),
         ))->select();
 
 
         // 2扩展分类
         // 2.1 获取当前扩展分类的所有商品id
-       $gcModel = D('goods_cat');
+        $gcModel = D('goods_cat');
         $eids = $gcModel->field('DISTINCT goods_id id')->where(array(// 这里把goods_id变为id是为了合并数组的时候方便
-            'cat_id'=>array('in',$children)
+            'cat_id' => array('in', $children)
         ))->select();
 
 
         // 1和2合并起来
         // 判断
-        if($gids&& $eids){
-            $gids = array_merge($gids,$eids);
-        }elseif ($eids){
+        if ($gids && $eids) {
+            $gids = array_merge($gids, $eids);
+        } elseif ($eids) {
             $gids = $eids;
         }
 
         // 二维变一维
         $ids = array();
-        foreach ($gids as $k=>$v){
+        foreach ($gids as $k => $v) {
             $ids[] = $v['id'];
         }
 
@@ -517,15 +516,14 @@ class GoodsModel extends Model {
      * 获取当前正在促销的商品
      * @param int $limit
      */
-    function getPromoteGoods($limit = 5)
-    {
+    function getPromoteGoods($limit = 5) {
         $today = date("Y-m-d H:i");
         return $this->field('id,promote_price,goods_name,mid_logo')
             ->where(array(
-                'is_on_sale'=>array('eq','是'),
-                'promote_price'=>array('gt',0),
-                'promote_start_date'=>array('elt',$today),
-                'promote_end_date'=>array('egt',$today),
+                'is_on_sale' => array('eq', '是'),
+                'promote_price' => array('gt', 0),
+                'promote_start_date' => array('elt', $today),
+                'promote_end_date' => array('egt', $today),
             ))->limit($limit)
             ->order('sort_num ASC')
             ->select();
@@ -537,12 +535,11 @@ class GoodsModel extends Model {
      * @param int $limit
      * 获取推荐商品（新品，精品，热卖）
      */
-    function getRecGoods($type,$limit=5)
-    {
+    function getRecGoods($type, $limit = 5) {
         return $this->field('id,shop_price,goods_name,mid_logo')
             ->where(array(
-                'is_on_sale' =>array('eq','是'),
-                $type=>array('eq','是')
+                'is_on_sale' => array('eq', '是'),
+                $type => array('eq', '是')
             ))->limit($limit)
             ->order('sort_num ASC')
             ->select();
@@ -551,8 +548,7 @@ class GoodsModel extends Model {
     /**
      * 获取当面会员的价格
      */
-    function getMemberPrice($goods_id)
-    {
+    function getMemberPrice($goods_id) {
         // 获取会员级别id
         $level_id = session('level_id');
 
@@ -560,47 +556,125 @@ class GoodsModel extends Model {
         $today = date('Y-m-d H:i');
         $promotePrice = $this->field('promote_price')
             ->where(array(
-                'promote_start_date'=>array('elt',$today),
-                'promote_end_date'=>array('egt',$today),
-                'id' =>array('eq',$goods_id),
+                'promote_start_date' => array('elt', $today),
+                'promote_end_date' => array('egt', $today),
+                'id' => array('eq', $goods_id),
             ))->find();
         // 如果登录返回会员价格
-        if ($level_id)
-        {
+        if ($level_id) {
             // 从会员价格表获取当前会员的价格
             $mpModel = D('Admin/member_price');
             $mpPrice = $mpModel->field('price')->where(array(
-                'level_id' => array('eq',$level_id),
-                'goods_id' => array('eq',$goods_id),
+                'level_id' => array('eq', $level_id),
+                'goods_id' => array('eq', $goods_id),
             ))->find();
             // 如果确实有设置当前会员价格
-            if ($mpPrice['price'])
-            {
-                if($promotePrice['promote_price'])
-                    return min($mpPrice['price'],$promotePrice['promote_price']);
+            if ($mpPrice['price']) {
+                if ($promotePrice['promote_price'])
+                    return min($mpPrice['price'], $promotePrice['promote_price']);
                 else
                     return $mpPrice['price'];
-            }
-            else
-            {
+            } else {
 
                 $shop_price = $this->field('shop_price')->find($goods_id);
 
-                if($promotePrice['promote_price'])
-                    return min($shop_price['shop_price'],$promotePrice['promote_price']);
+                if ($promotePrice['promote_price'])
+                    return min($shop_price['shop_price'], $promotePrice['promote_price']);
                 else
                     return $shop_price['shop_price'];
             }
-        }
-        else // 没有登录返回本店价
+        } else // 没有登录返回本店价
         {
 
             $shop_price = $this->field('shop_price')->find($goods_id);
-            if($promotePrice['promote_price'])
-                return min($shop_price['shop_price'],$promotePrice['promote_price']);
+            if ($promotePrice['promote_price'])
+                return min($shop_price['shop_price'], $promotePrice['promote_price']);
             else
                 return $shop_price['shop_price'];
         }
 
     }
+
+    /**
+     * 获取某个分类某一页的商品
+     */
+    public function cat_search($catId, $page = 15) {
+        /*******1 搜索*******/
+        $where = array();
+        // 最基本条件：取出本分类下的商品id
+        $ids = $this->getIdsByCatId($catId);
+        $where['a.id'] = array('in', $ids);
+        // 1.1 品牌
+        $brandId = I('get.brand_id');
+        if ($brandId) {
+            $where['a.brand_id'] = array('eq', (int)$brandId);
+        }
+        // 1.2 价格
+        $price = I('get.price');
+        if ($price) {
+            $where['a.shop_price'] = array('between', explode('-', $price));
+        }
+
+        // 1.3 商品属性的搜索
+        $gaModel = D('Admin/goods_attr');
+        $attrGoodsIds = null; // 记录所有复合属性的商品id
+        // 只能遍历所有的GET参数
+        foreach ($_GET as $k => $v) {
+            if (strpos($k, 'attr_') === 0) // 说明是需要寻找的属性
+            {
+                $attrId = strrchr($k, '_');
+                $attrName = strrchr($v, '-');
+                $attrValue = str_replace($attrName, '', $v);
+
+                // 1.3.1 取商品以,分隔在一个字符串里面
+                $gids = $gaModel->field('GROUP_CONCAT(goods_id) gids')
+                    ->where(array(
+                        'attr_id' => array('eq', $attrId),
+                        'attr_value' => array('eq', $attrValue)
+                    ))->find();
+
+                // 1.3.2 判断商品是否存在
+                if ($gids['gids']) {
+                    $gids = explode(',', $gids['gids']);
+                    // 第一次搜索条件初始化一下
+                    if ($attrGoodsIds === null) {
+                        $attrGoodsIds[] = explode(',', $gids);
+                    }
+                    // 和上一次的取交集
+                    $attrGoodsIds = array_intersect($attrGoodsIds, $gids);
+
+                    // 1.3.3 判断交集是否存在
+                    if (empty($attrGoodsIds)) {
+                        $where['a.goods_id'] = array('eq', -1);
+                        break;
+                    }
+                } else {
+                    // 没有取出商品，则后面的foreach就不用继续了
+                    $attrGoodsIds = array();
+                    $where['a.goods_id'] = array('eq', -1);
+                    break;
+                }
+            }
+        }
+
+        // 1.3.4 如果此时数组还不为空则说明属性交集存在了
+        if ($attrGoodsIds)
+        {
+            $where['a.goods_id'] = array('in',$attrGoodsIds);
+        }
+        /***************3 取数据 ********************/
+
+        $ogModel = D('Admin/order_goods');
+        $data['data'] = $this->alias('a')
+            ->field('a.id,a.mid_logo,a.goods_name,a.shop_price,SUM(b.goods_number) xl')
+            ->join('LEFT JOIN __ORDER_GOODS__ b on 
+            (a.id = b.goods_id and
+            b.order_id in (select id from p39_order where pay_status = "是"))')
+            ->where($where)
+            ->group('a.id')
+            ->select();
+
+        return $data;
+    }
+
 }

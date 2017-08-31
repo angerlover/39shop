@@ -25,7 +25,7 @@
             <ul>
                 <li id="login_info"> </li>
                 <li class="line">|</li>
-                <li>我的订单</li>
+                <li ><a href="<?php echo U('My/order');?>">我的订单</a></li>
                 <li class="line">|</li>
                 <li>客户服务</li>
 
@@ -138,14 +138,17 @@
             <div class="cat_bd <?php if($_show_nav == 0) echo 'none'; ?>">
                 <?php foreach($navData as $k =>$v):?>
                 <div class="cat item1">
-                    <h3><a href=""><?php echo $v['cat_name'];?></a> <b></b></h3>
+                    <h3>
+                        <a href="<?php echo U('Search/cat_search?cat_id='.$v['id'],'',false);?>" target="_blank">
+                            <?php echo $v['cat_name'];?>
+                        </a> <b></b></h3>
                     <div class="cat_detail">
                         <?php foreach($v['children'] as $k1=>$v1):?>
                         <dl class="dl_1st">
-                            <dt><a href=""><?php echo $v1['cat_name'];?></a></dt>
+                            <dt><a href="<?php echo U('Search/cat_search?cat_id='.$v1['id'],'',false);?>" target="_blank"><?php echo $v1['cat_name'];?></a></dt>
                             <dd>
                                 <?php foreach($v1['children'] as $k2=>$v2):?>
-                                <a href=""><?php echo $v2['cat_name'];?></a>
+                                <a href="<?php echo U('Search/cat_search?cat_id='.$v2['id'],'',false);?>" target="_blank"><?php echo $v2['cat_name'];?></a>
                                 <?php endforeach;?>
                             </dd>
                         </dl>

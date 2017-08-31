@@ -217,4 +217,84 @@ class CategoryModel extends Model
         return $res;
     }
 
+    /**
+     * @param $catId
+     * 根据分类id获取前台搜索条件
+     */
+    function getSearchConditionByCatId($catId)
+    {
+        $res = array();
+        /**********品牌***********/
+        $goodsModel = D('Admin/goods');
+        // 获取当前分类下的所有商品id
+        $ids = $goodsModel->getIdsByCatId($catId);
+
+        $res['brand'] = $goodsModel
+            ->alias('a')
+            ->field('DISTINCT brand_id,b.brand_name,b.logo')
+            ->join('LEFT JOIN __BRAND__ b on a.brand_id = b.id')
+            ->where(array(
+                'a.id'=>array('in',$ids),
+                'a.brand_id'=>array('neq',0), // 品牌id不为0
+            ))->select();
+
+        /**********价格***********/
+        $sectionCount = 6; // 默认6个区间段
+        $priceInfo = $goodsModel->field('MAX(shop_price) max_price,MIN(shop_price) min_price')
+            ->where(array(
+            'id' => array('in',$ids)
+        ))->find();
+        // 价格区间
+        $priceSection = $priceInfo['max_price'] - $priceInfo['min_price'];
+        $goodsCount = count($ids);
+
+        // 根据价格极差计算分几段
+        if($goodsCount > 1)
+        {
+            if($priceSection < 100)
+                $sectionCount = 2;
+            elseif ($priceSection < 1000)
+                $sectionCount = 4;
+            elseif ($priceSection < 10000)
+                $sectionCount = 6;
+            else
+                $sectionCount = 7;
+        }
+        $pricePerSection = ceil($priceSection/$sectionCount);
+        $price = array();
+        $firstPrice = 0; // 第一个价格段的开始
+        for ($i=0;$i<$sectionCount;$i++)
+        {
+            // 每段的结尾价格
+            $_tempEnd = $firstPrice + $pricePerSection;
+            // 把段尾价格取整
+            $price[] = $firstPrice .'-'.$_tempEnd;
+
+            $firstPrice = $_tempEnd + 1;
+        }
+
+        $res['price'] = $price;
+        /**********属性***********/
+        $gaModel = D('Admin/goods_attr');
+        $gaData = $gaModel->alias('a')
+            ->field('DISTINCT a.attr_id,a.attr_value,b.attr_name')
+            ->join('LEFT JOIN __ATTRIBUTE__ b on a.attr_id = b.id')
+            ->where(array(
+                'a.goods_id' => array('in',$ids),
+                'a.attr_value' => array('neq','')
+            ))->select();
+
+        // 二维转三维
+        $_gaData = array();
+        foreach($gaData as $k=> $v)
+        {
+            $_gaData[$v['attr_name']][] = $v;
+        }
+
+        // 放入
+        $res['attr'] = $_gaData;
+
+        return $res;
+    }
+
 }

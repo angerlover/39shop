@@ -177,7 +177,7 @@ class GoodsController extends BaseController{
         $goods = D('goods');
         $data = $goods->search();
         $this->assign($data);
-
+//        dump($data);die;
         // 获取所有的主分类
         $catData = D('category')->getTree();
         $this->assign(

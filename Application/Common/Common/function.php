@@ -1,4 +1,19 @@
 <?php
+
+
+/**
+ * 从当前URL中去掉某个参数之后的URL
+ *
+ * @param unknown_type $param
+ */
+function filterUrl($param)
+{
+    // 获取当前的RUL地址
+    $url = $_SERVER['PHP_SELF'];
+    $reg = "/\/$param\/[^\/]+/";
+    return preg_replace($reg, '', $url);
+}
+
 /**
  * Created by PhpStorm.
  * User: pepe
