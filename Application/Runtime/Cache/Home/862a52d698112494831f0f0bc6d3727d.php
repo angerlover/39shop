@@ -490,32 +490,26 @@
 					<div class="comment detail_div mt10">
 						<div class="comment_summary">
 							<div class="rate fl">
-								<strong><em>90</em>%</strong> <br />
+								<strong><em class="hao">90</em>%</strong> <br />
 								<span>好评度</span>
 							</div>
 							<div class="percent fl">
 								<dl>
-									<dt>好评（90%）</dt>
-									<dd><div style="width:90px;"></div></dd>
+									<dt>好评（<span class="hao"></span>%）</dt>
+									<dd><div id="hao_width" style="width:90px;"></div></dd>
 								</dl>
 								<dl>
-									<dt>中评（5%）</dt>
-									<dd><div style="width:5px;"></div></dd>
+									<dt>中评（<span class="zhong"></span>%）</dt>
+									<dd><div id="zhong_width" style="width:5px;"></div></dd>
 								</dl>
 								<dl>
-									<dt>差评（5%）</dt>
-									<dd><div style="width:5px;" ></div></dd>
+									<dt>差评（<span class="cha"></span>%）</dt>
+									<dd><div id="cha_width" style="width:5px;" ></div></dd>
 								</dl>
 							</div>
 							<div class="buyer fl">
 								<dl>
 									<dt>买家印象：</dt>
-									<dd><span>屏幕大</span><em>(1953)</em></dd>
-									<dd><span>外观漂亮</span><em>(786)</em></dd>
-									<dd><span>系统流畅</span><em>(1091)</em></dd>
-									<dd><span>功能齐全</span><em>(1109)</em></dd>
-									<dd><span>反应快</span><em>(659)</em></dd>
-									<dd><span>分辨率高</span><em>(824)</em></dd>
 								</dl>
 							</div>
 						</div>
@@ -525,15 +519,7 @@
 
 						<!-- 分页信息 start -->
 						<div class="page mt20">
-							<a href="">首页</a>
-							<a href="">上一页</a>
-							<a href="">1</a>
-							<a href="">2</a>
-							<a href="" class="cur">3</a>
-							<a href="">4</a>
-							<a href="">5</a>
-							<a href="">下一页</a>
-							<a href="">尾页</a>
+
 						</div>
 						<!-- 分页信息 end -->
 
@@ -545,15 +531,19 @@
 									<li>
 										<label for=""> 评分：</label>
 										<input value="5" type="radio" name="star"/> <strong class="star star5"></strong>
-										<input value="5" type="radio" name="star"/> <strong class="star star4"></strong>
-										<input value="5" type="radio" name="star"/> <strong class="star star3"></strong>
-										<input value="5" type="radio" name="star"/> <strong class="star star2"></strong>
-										<input value="5" type="radio" name="star"/> <strong class="star star1"></strong>
+										<input value="4" type="radio" name="star"/> <strong class="star star4"></strong>
+										<input value="3" type="radio" name="star"/> <strong class="star star3"></strong>
+										<input value="2" type="radio" name="star"/> <strong class="star star2"></strong>
+										<input value="1" type="radio" name="star"/> <strong class="star star1"></strong>
 									</li>
 
 									<li>
 										<label for="">评价内容：</label>
 										<textarea name="content" id="" cols="" rows=""></textarea>
+									</li>
+									<li id="mjyx">
+										<label for="">印象：</label>
+										<input type="text" name="yx_name" size="60">
 									</li>
 									<li>
 										<label for="">&nbsp;</label>
@@ -717,7 +707,7 @@
         }
 		});
 
-// 发表评论
+	// ajax发表评论
 	$('.comment_btn').click(function () {
 
 	    var commentForm = $('#comment_form');
@@ -739,7 +729,7 @@
 
                             // 触发reset 清空表单的内容
                             commentForm.trigger('reset');
-                            alert(data);
+                            // 拼出一个当前评论内容的html
                             var html = '<div class="comment_items mt10 none"><div class="user_pic"><dl><dt><a href=""><img src="'+data.info.face+'" alt="" /></a></dt><dd><a href="">'+data.info.username+'</a></dd></dl></div><div class="item"><div class="title"><span>'+data.info.addtime+'</span><strong class="star star'+data.info.star+'"></strong></div><div class="comment_content">'+data.info.content+'</div><div class="btns"><a href="javascript:void(0);" onclick="do_reply(this,'+data.info.id+');" class="reply">回复(0)</a><a href="" class="useful">有用(0)</a></div><div class="reply_form"></div><ul class="reply_container"></ul></div><div class="cornor"></div></div>';
                             html = $(html); // 转换为jquery对象
                             $('#comment_area').prepend(html);
@@ -759,7 +749,7 @@
 <!--jquery ui的表单-->
 <link href="/Public/jquery-ui-1.9.2.custom/css/blitzer/jquery-ui-1.9.2.custom.css" rel="stylesheet">
 <script src="/Public/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.js"></script>
-<!--做一个登录的表单-->
+<!--做一个给jquery ui用的登录的表单-->
 <div id="dialog_login" class="none" title="登录">
 	<form id="login_form">
 		<ul>
@@ -820,6 +810,139 @@
 			}
 		]
 	});
+</script>
+<script>
+	/*ajax获取某一页的评论*/
+	 function ajaxGetPl (page)
+	{
+		$.ajax({
+		            type:'get',
+		            url:"<?php echo U('Comment/ajaxGetComment?goods_id='.$info['id'],'',false);?>"+"/p/"+page,
+		            dataType:'json',
+		            success:function (data)
+		            {
+		                is_login = data.memberId;
+						var html = ''; // 待拼的字符串
+						$(data.data).each(function (k,v)
+						{
+                            // 每条回复的html字符串
+                            var replyHtml = '';
+                            $(v.reply).each(function (k1,v1) {
+                                replyHtml += '<li><img src="'+v1.face+'">'+v1.username+'【'+v1.addtime+'】回复：'+v1.content+'</li>';
+                            });
+
+
+							html += '<div class="comment_items mt10"><div class="user_pic"><dl><dt><a href=""><img src="'+v.face+'" alt="" /></a></dt><dd><a href="">'+v.username+'</a></dd></dl></div><div class="item"><div class="title"><span>'+v.addtime+'</span><strong class="star star'+v.star+'"></strong></div><div class="comment_content">'+v.content+'</div><div class="btns"><a href="javascript:void(0);" onclick="do_reply(this,'+v.id+');" class="reply">回复('+v.reply_count+')</a><a href="" class="useful">有用('+v.star+')</a></div><div class="reply_form"></div><ul class="reply_container">'+replyHtml+'</ul></div><div class="cornor"></div></div>';
+                        });
+						// 放到评论区覆盖原数据
+						$('#comment_area').html(html);
+
+						/*******根据返回的总页数拼出分页的html*****/
+
+						var pageString = '';
+						for(var i = 1;i<=data.pageCount;i++)
+						{
+						    if(page == i)
+							{
+							    var cls = "class = 'cur'";
+							}
+							else
+							{
+							    var cls = '';
+							}
+							  pageString += "<a "+cls+" onclick='ajaxGetPl("+i+")' href = 'javascript:void(0);'>"+i+" </a>"
+						}
+
+
+						$('.page').html(pageString);
+
+						// 给好评数据
+						$('.hao').html(data.hao);
+						$('.zhong').html(data.zhong);
+						$('.cha').html(data.cha);
+						$('#hao_width').css('width',data.hao+'px');
+						$('#zhong_width').css('width',data.zhong+'px');
+						$('#cha_width').css('width',data.cha+'px');
+
+
+						// 给印象的数据
+						var yxhtml = ''; // 上面用于显示印象的
+						var chkYxHtml = ''; // 表单里用于提交的已有印象
+						$(data.yxData).each(function (k,v)
+						{
+							yxhtml += '<dd><span>'+v.yx_name+'</span><em>('+v.yx_count+')</em></dd>'
+							chkYxHtml += '<input type="checkbox" name="yx_id[]" value="'+v.id+'"/> '+' '+v.yx_name;
+                        });
+
+						// 添加进去
+						$('.buyer dl').append(yxhtml);
+						if(chkYxHtml != '')
+						{
+                            $('#mjyx').before(chkYxHtml);
+                        }
+		            }
+		        });
+	};
+
+	 ajaxGetPl(1);
+	var is_login = 0;// 全局变量判断是否登录
+
+    /**
+	 * 生成回复评论的div区域
+     * @param btn 点击的button
+     * @param commentId 当前评论的id
+     */
+	function do_reply(btn,commentId)
+	{
+	    var div = $(btn).parent().next('div');
+	    var html = '';
+	    html += '<hr><form><input type="hidden" name="comment_id" value="'+commentId+'"><textarea name="content" rows="6" style="width:100%" > </textarea><br> <input onclick="post_reply(this);" type="button" value="确定"> <input onclick="close_reply(this);" type="button" value="取消"></form?';
+        div.html(html)
+
+        // 判断是否登录
+        if(is_login <= 0)
+        {
+            $('#dialog_login').dialog('open');
+        }
+	}
+
+    /**
+	 *  关闭回复的表单
+     * @param btn
+     */
+	function close_reply(btn) {
+		var parent = $(btn).parent();
+		parent.html('');
+    }
+    /**
+	 * ajax发表回复
+     * @param btn
+     */
+    function post_reply(btn)
+	{
+		var formData = $(btn).parent('form').serialize();
+		$.ajax({
+		            type:'post',
+		            url:"<?php echo U('Comment/ajaxReply');?>",
+					data:formData,
+		            dataType:'json',
+		            success:function (data)
+		            {
+						// 拼出一个用于显示回复的html字符串
+						var html = '';
+						html += '<li><img src="'+data.info.face+'">'+data.info.username+'【'+data.info.addtime+'】回复：'+data.info.content+'</li>';
+                        $(btn).parent().parent().next("ul").append(html);
+                        // 把表单去掉
+                        $(btn).parent().parent().html('');
+
+		                // 未登录现实登录窗口
+						if(data.info == '必须先登录!')
+						{
+						 	$('#dialog_login').dialog('open');
+						}
+		            }
+		        });
+	}
 </script>
 
 <div style="clear:both;"></div>

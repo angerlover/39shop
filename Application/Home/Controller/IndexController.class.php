@@ -3,6 +3,8 @@ namespace Home\Controller;
 class IndexController extends NavController {
     public function index(){
 
+
+
         // 获取首页促销商品数据
         $goodsModel = D('Admin/goods');
         $proData = $goodsModel->getPromoteGoods(5);

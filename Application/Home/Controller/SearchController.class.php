@@ -37,6 +37,18 @@ class SearchController extends NavController
     {
         $key = I('get.key');
         $goodsModel = D('Admin/Goods');
+
+        // 测试sphix哈哈
+        require ('./sphinxapi.php');
+        $sph = new \SphinxClient();
+        $sph->SetServer('localhost',9312);
+        $res = $sph->Query($key,'goods');
+        $ids = array_keys($res['matches']);
+        $res = $goodsModel->field('id,goods_name,goods_desc,mid_logo')->where(array(
+            'id' => array('in',$ids),
+        ))->select();
+        dump($res);
+
         $catModel = D('Admin/category');
         $data = $goodsModel->key_search($key);
         $serachByCatCondition = $catModel->getSearchConditionByGoodsIds($data['goods_id']);

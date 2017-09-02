@@ -440,7 +440,7 @@
 					<dl>
 						<dt>品牌：</dt>
 						<?php foreach($searchData['brand'] as $k=> $v):?>
-						<dd><a href="/index.php/Home/Search/key_search/key/index.html/brand_id/<?php echo $v['brand_id'];?>-<?php echo $v['brand_name'];?>"><?php echo $v['brand_name']?></a></dd>
+						<dd><a href="/index.php/Home/Search/key_search/key/%E8%A9%B9%E5%A7%86%E6%96%AF/brand_id/<?php echo $v['brand_id'];?>-<?php echo $v['brand_name'];?>"><?php echo $v['brand_name']?></a></dd>
 						<?php endforeach;?>
 					</dl>
 					<?php endif;?>
@@ -448,7 +448,7 @@
 					<dl>
 						<dt>价格：</dt>
 						<?php foreach($searchData['price'] as $k=> $v):?>
-						<dd><a href="/index.php/Home/Search/key_search/key/index.html/price/<?php echo $v;?>"><?php echo $v?></a></dd>
+						<dd><a href="/index.php/Home/Search/key_search/key/%E8%A9%B9%E5%A7%86%E6%96%AF/price/<?php echo $v;?>"><?php echo $v?></a></dd>
 						<?php endforeach;?>
 					</dl>
 					<?php endif;?>
@@ -457,7 +457,7 @@
 					<dl>
 						<dt><?php echo $k;?>:</dt>
 						<?php foreach($v as $k1=> $v1):?>
-						<dd ><a href="/index.php/Home/Search/key_search/key/index.html/<?php echo $attrName;?>/<?php echo $v1['attr_value'];?>-<?php echo $k;?>"><?php echo $v1['attr_value'];?></a> </dd>
+						<dd ><a href="/index.php/Home/Search/key_search/key/%E8%A9%B9%E5%A7%86%E6%96%AF/<?php echo $attrName;?>/<?php echo $v1['attr_value'];?>-<?php echo $k;?>"><?php echo $v1['attr_value'];?></a> </dd>
 						<?php endforeach;?>
 					</dl>
 					<?php endforeach;?>
