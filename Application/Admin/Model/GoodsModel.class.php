@@ -69,8 +69,17 @@ class GoodsModel extends Model {
      * 修改之前
      */
     function _before_update(&$data, $options) {
+
+        // 标记商品被修改了 需要重新为sphinx建立索引
+        $data['is_updated'] = 1;
         // 获取id
         $id = $options['where']['id'];
+
+        // sphinx对于修改
+        require ('./sphinxapi.php');
+        $sph = new \SphinxClient();
+        $sph->SetServer('localhost',9312);
+        $sph->UpdateAttributes('goods',array('is_updated'),array($id=>1));
         // 修改扩展分类
         // 对会员价格的修改
         $catIds = I('post.ext_cat_id');

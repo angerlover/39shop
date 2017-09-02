@@ -210,3 +210,255 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000768s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
 
+[ 2017-09-02T14:35:15+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/%E8%A9%B9%E5%A7%86%E6%96%AF
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:35:16+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001127s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001182s ]
+
+[ 2017-09-02T14:35:39+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/%E8%A9%B9%E5%A7%86%E6%96%AF
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:35:39+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001594s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000834s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2017-09-02T14:36:14+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/%E8%A9%B9%E5%A7%86%E6%96%AF
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:36:14+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000842s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+
+[ 2017-09-02T14:36:26+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/james
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:36:26+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2017-09-02T14:36:48+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/james
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:36:48+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001204s ]
+
+[ 2017-09-02T14:37:11+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/kobe
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:37:11+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001396s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001408s ]
+
+[ 2017-09-02T14:42:18+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/kobe
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:42:18+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001419s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000792s ]
+
+[ 2017-09-02T14:42:23+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/kobe
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:42:23+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000932s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001014s ]
+
+[ 2017-09-02T14:42:32+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/%E4%B9%94%E4%B8%B9
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:42:32+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001962s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2017-09-02T14:43:05+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/%E4%B9%94%E4%B8%B9
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:43:05+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000957s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001056s ]
+
+[ 2017-09-02T14:50:26+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/%E4%B9%94%E4%B8%B9
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:50:26+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2017-09-02T14:50:33+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/jordan
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:50:33+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001886s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2017-09-02T14:51:03+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/westlife
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:51:03+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001668s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2017-09-02T14:51:17+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/westlife
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:51:17+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000876s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000951s ]
+
+[ 2017-09-02T14:51:37+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/westlife
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:51:37+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000873s ]
+
+[ 2017-09-02T14:51:43+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/westlife
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:51:43+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2017-09-02T14:55:17+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/westlife
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:55:17+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001736s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001169s ]
+
+[ 2017-09-02T14:55:26+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/%E5%90%8E%E8%A1%97%E7%94%B7%E5%AD%A9
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:55:26+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001662s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000603s ]
+
+[ 2017-09-02T14:55:40+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/%E5%90%8E%E8%A1%97%E7%94%B7%E5%AD%A9
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:55:41+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001225s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+
+[ 2017-09-02T14:55:55+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/%E5%90%8E%E8%A1%97%E7%94%B7%E5%AD%A9
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:55:55+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001627s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001061s ]
+
+[ 2017-09-02T14:56:06+08:00 ] 127.0.0.1 /index.php/Home/Search/key_search/key/%E5%90%8E%E8%A1%97%E7%94%B7%E5%AD%A9
+NOTIC: D方法实例化没找到模型类Admin\Model\GoodsAttrModel
+NOTIC: D方法实例化没找到模型类Admin\Model\OrderGoodsModel
+
+[ 2017-09-02T14:56:06+08:00 ] 127.0.0.1 /index.php/Home/Member/ajaxChkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001081s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000871s ]
+

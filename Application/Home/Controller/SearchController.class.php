@@ -42,6 +42,7 @@ class SearchController extends NavController
         require ('./sphinxapi.php');
         $sph = new \SphinxClient();
         $sph->SetServer('localhost',9312);
+        $sph->SetFilter('is_updated',array(0)); // 只取出等于0的
         $res = $sph->Query($key,'goods');
         $ids = array_keys($res['matches']);
         $res = $goodsModel->field('id,goods_name,goods_desc,mid_logo')->where(array(
