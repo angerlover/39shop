@@ -233,7 +233,7 @@ class GoodsController extends BaseController{
         $this->assign('mlData',$mlModel->select());
         // 查找商品的相册
         $gpModel = D('goods_pic');
-        $gpData = $gpModel->field('id,pic,mid_pic')->where(array('goods_id'=>array('eq',$id)))->select();
+        $gpData = $gpModel->field('id,pic,mid_pic,sm_pic')->where(array('goods_id'=>array('eq',$id)))->select();
         $this->assign('gpData',$gpData);
         // 根据id查找当前的商品
         $data = $goods->find($id);

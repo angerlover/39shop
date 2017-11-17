@@ -51,10 +51,13 @@
 
 
             // 所有的父权限也要选中
-            $(this).prevAll(':checkbox').each(function (k,v) {
-                if($(v).attr('level_id')<tmp_level_id){
+            $(this).prevAll(':checkbox').each(function (k,v) 
+            {
+                console.log($(v).val());
+                if($(v).attr('level_id')<tmp_level_id)
+                {
                     $(v).prop('checked','checked');
-                    tmp_level_id--; // 再找更上一级的
+                    tmp_level_id--; // 再找更上一级的,因为只有一个父节点，以免找到【叔叔】
                 }
             });
         }else{

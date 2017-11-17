@@ -21,7 +21,7 @@ class CategoryController extends BaseController {
             if ($info) { // 收集数据成功
                 $result = $model->add();
                 if ($result) { // 入库成功
-                    $this->success('添加商品成功', 'showlist');
+                    $this->success('添加商品成功', 'lst');
                     exit;
                 }
             }
@@ -36,7 +36,7 @@ class CategoryController extends BaseController {
                 'catData' => $catData,
                 '_page_title' => '添加分类',
                 '_page_btn_name' => '返回',
-                '_page_btn_link' => U('showlist'),
+                '_page_btn_link' => U('lst'),
             )
         );
         $this->display();
@@ -74,7 +74,7 @@ class CategoryController extends BaseController {
 //                dump($info);die;
                 $result = $model->save();
                 if ($result !== false) { // 只能使用全等
-                    $this->success('修改分类成功', U('showlist'));
+                    $this->success('修改分类成功', U('lst'));
                     exit;
                 }
             }
@@ -95,7 +95,7 @@ class CategoryController extends BaseController {
                 'catData'=>$catData,
                 '_page_title' => '修改分类',
                 '_page_btn_name' => '返回',
-                '_page_btn_link' => U('showlist'),
+                '_page_btn_link' => U('lst'),
             )
         );
         $this->display();

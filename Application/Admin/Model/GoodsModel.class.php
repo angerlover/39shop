@@ -183,7 +183,7 @@ class GoodsModel extends Model {
 
             }
         }
-
+        // dump($_POST);die;
         // 处理商品属性
         $gaModel = D('goods_attr');
         $gaid = I('post.goods_attr_id'); // 商品属性表
